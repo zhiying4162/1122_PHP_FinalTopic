@@ -1,30 +1,23 @@
 <?php
-require_once 'DB_conn.php';
+    require_once 'DB_conn.php';
 
-$CName = $_POST['CName'];
-$JobTitle = 'employee';
-$Gender = $_POST['Gender'];
-$Birthday = $_POST['Birthday'];
-$IDCard = $_POST['IDCard'];
-$CNumber = $_POST['CNumber']; 
-$HomeAddress = $_POST['HomeAddress'];
-$BankCode = $_POST['BankCode'];
-$AccountNumber = $_POST['AccountNumber'];
-$ECName = $_POST['ECName'];
-$ECNumber = $_POST['ECNumber'];
-$JoinDate = $_POST['JoinDate'];
-$LeaveDate = $_POST['LeaveDate'];
-
-if(!isset($CName)){
-    
-    header("Location:register.php");
-}
-else{
+    $CName = $_POST['CName'];
+    $JobTitle = 'employee';
+    $Gender = $_POST['Gender'];
+    $Birthday = $_POST['Birthday'];
+    $IDCard = $_POST['IDCard'];
+    $CNumber = $_POST['CNumber']; 
+    $HomeAddress = $_POST['HomeAddress'];
+    $BankCode = $_POST['BankCode'];
+    $AccountNumber = $_POST['AccountNumber'];
+    $ECName = $_POST['ECName'];
+    $ECNumber = $_POST['ECNumber'];
+    $JoinDate = $_POST['JoinDate'];
+    $LeaveDate = $_POST['LeaveDate'];
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (isset($_POST['register'])) {
-            $error_message = "未輸入資料！";
-            header("Location: register.php?error=" . urlencode($error_message));
+            header("Location: register.php");
             exit();
         } 
         elseif (isset($_POST['MainMenu'])) {
@@ -32,9 +25,6 @@ else{
             exit();
         } 
     }
-
-
-    
 
     if($Gender == 'Male'){
         $Gender = '男性';
@@ -79,7 +69,7 @@ else{
     $result_insert = mysqli_query($link,$sql_insert);
 
     if($result_insert){
-        echo '<form method="post" action="register_insert.php">';
+        echo '<form action="register_insert.php">';
         echo "<h1>註冊成功</h1>";
         echo "<p>員工姓名：$CName</p>";
         echo "<p>員工編號：$ID</p>";
@@ -93,6 +83,6 @@ else{
     }
         
     mysqli_close($link); 
-}
-// echo $CName . '<br/>' . $Password . '<br/>'. $ID . '<br/>' . $JobTitle . '<br/>'. $Gender . '<br/>'. $Birthday . '<br/>'. $IDCard . '<br/>'. $CNumber . '<br/>'. $HomeAddress . '<br/>'. $BankCode . '<br/>'. $AccountNumber . '<br/>'. $ECName . '<br/>'. $ECNumber . '<br/>'. $JoinDate . '<br/>'. $LeaveDate . '<br/>' . $Year;
+
+    // echo $CName . '<br/>' . $Password . '<br/>'. $ID . '<br/>' . $JobTitle . '<br/>'. $Gender . '<br/>'. $Birthday . '<br/>'. $IDCard . '<br/>'. $CNumber . '<br/>'. $HomeAddress . '<br/>'. $BankCode . '<br/>'. $AccountNumber . '<br/>'. $ECName . '<br/>'. $ECNumber . '<br/>'. $JoinDate . '<br/>'. $LeaveDate . '<br/>' . $Year;
 ?>

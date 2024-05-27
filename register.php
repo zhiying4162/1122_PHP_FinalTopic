@@ -60,23 +60,10 @@
     }
 </style>
 
-<script>
-  function showError(message) {
-    alert(message);
-  }
-</script>
-
 </head>
 
 
 <body>
-
-<?php
-if (isset($_GET['error'])) {
-    $error_message = htmlspecialchars($_GET['error']);
-    echo "<script type='text/javascript'>showError('$error_message');</script>";
-}
-?>
 
 <div class="container">
 
