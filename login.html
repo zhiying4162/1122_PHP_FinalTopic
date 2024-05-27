@@ -1,0 +1,87 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>登入頁面</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 50%;
+      text-align: center;
+      padding: 30px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .container h1 {
+      text-align: center;
+    }
+
+    .container p {
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    select,
+    input[type="text"],
+    input[type="date"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    input[type="submit"]:hover,
+    input[type="reset"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <form id="form1" name="form1" method="post" action="login.php">
+      <h1>登入</h1>
+      <p>
+        <label for="id">登入帳號：</label>
+        <input name="id" type="text" id="id" size="20" maxlength="14" />
+      </p>
+      <p>
+        <label for="password">密&emsp;&emsp;碼：</label>
+        <input name="password" type="password" id="password" size="20" maxlength="14" />
+      </p>
+      <input type="submit" name="button" id="button" value="送出" />
+      <input Type="reset" name="button" id="button" value="重設" />
+    </form>
+</body>
+
+</html>
