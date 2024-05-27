@@ -5,6 +5,8 @@
     $id = $_POST['id'];
     $password = $_POST['password'];
 
+    $_SESSION['id'] = $id;
+
     $sql = "select CName , JobTitle from employee WHERE ID = '$id' AND Password = '$password'";
     $result = mysqli_query($link,$sql);
 
