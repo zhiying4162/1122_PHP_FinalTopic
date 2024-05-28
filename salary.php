@@ -1,102 +1,44 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>員工薪資計算</title>
-<style>
-	body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>員工薪資計算</title>
+	<link rel="stylesheet" type="text/css" href="./CSS/salaryStyle.css">
 
-    .container {
-        width: 50%;
-        text-align: center;
-        padding: 30px;
-        background-color: #f4f4f4;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
+	<script>
+		function showContent() {
+			var expandContent = document.getElementById("hidden-content");
+			var monthSelect = document.getElementById("Month");
+			var selectedMonth = monthSelect.options[monthSelect.selectedIndex].text;
+			var monthText = document.getElementById("month-text");
+			var back = document.getElementById("back");
+			
+			/*var employeeSelect = document.getElementById("ID");
+			var selectedEmployee = employeeSelect.options[employeeSelect.selectedIndex].text;
+			var employeeText = document.getElementById("employee-text");*/
 
-    .container h1 {
-		text-align: center;
-    }
-
-    .container p {
-        margin-bottom: 10px;
-		text-align: left; 
-    }
-
-    select, input[type="text"], input[type="date"] {
-        width: 100%;
-        padding: 10px;
-        font-size: 16px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        box-sizing: border-box; 
-    }
-
-    input[type="button"], input[type="button"] {
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        background-color: #007bff;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-
-    input[type="button"]:hover, input[type="button"]:hover {
-        background-color: #0056b3;
-    }
-	
-	#hidden-content {
-        display: none;
-    }
-	
-	#hidden-content p {
-		margin-bottom: 10px;
-		text-align: left;
-	}
-</style>
-
-<script>
-	function showContent() {
-		var expandContent = document.getElementById("hidden-content");
-		var monthSelect = document.getElementById("Month");
-		var selectedMonth = monthSelect.options[monthSelect.selectedIndex].text;
-		var monthText = document.getElementById("month-text");
-		var back = document.getElementById("back");
-		
-		/*var employeeSelect = document.getElementById("ID");
-		var selectedEmployee = employeeSelect.options[employeeSelect.selectedIndex].text;
-		var employeeText = document.getElementById("employee-text");*/
-
-		if (expandContent.style.display === "none") {
-			expandContent.style.display = "block";
-			back.style.display = "none";
-			/*employeeText.innerText = selectedEmployee;*/
-			monthText.innerText = selectedMonth;
-		} else {
-			expandContent.style.display = "none";
-			back.style.display = "inline";
+			if (expandContent.style.display === "none") {
+				expandContent.style.display = "block";
+				back.style.display = "none";
+				/*employeeText.innerText = selectedEmployee;*/
+				monthText.innerText = selectedMonth;
+			} else {
+				expandContent.style.display = "none";
+				back.style.display = "inline";
+			}
 		}
-	}
 
-	function EmployeeSalary(){
-		var BasicWage = parseFloat(document.getElementById("HWage").value) || 0;
-		var WorkDays = parseFloat(document.getElementById("WorkDay").value) || 0;
-		var OverHours = parseFloat(document.getElementById("OHours").value) || 0;
-		var OverPay = parseFloat(document.getElementById("OPay").value) || 0;
+		function EmployeeSalary(){
+			var BasicWage = parseFloat(document.getElementById("HWage").value) || 0;
+			var WorkDays = parseFloat(document.getElementById("WorkDay").value) || 0;
+			var OverHours = parseFloat(document.getElementById("OHours").value) || 0;
+			var OverPay = parseFloat(document.getElementById("OPay").value) || 0;
 
-		var totalSalary = (BasicWage * WorkDays * 8) + (OverHours * OverPay);
-		document.getElementById("Money").value = totalSalary;
-	}
-</script>
+			var totalSalary = (BasicWage * WorkDays * 8) + (OverHours * OverPay);
+			document.getElementById("Money").value = totalSalary;
+		}
+	</script>
 </head>
 
 <body>
@@ -108,7 +50,7 @@
         "option2" => "6月"
         ];
 		
-		require_once 'DB_conn.php';  #待修改連接
+		require_once 'DB_conn.php';  
 		$sql = "select BankCode from bank";
 		$result = mysqli_query($link,$sql);
 
@@ -165,7 +107,7 @@
 			<input name="OHours" type="OHours" id="OHours" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
 		 </p>
 		 <p>
-			<label for="OPay">加班費：</label>
+			<label for="OPay">加班費&emsp;：</label>
 			<input name="OPay" type="OPay" id="OPay" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
 		 </p>
 		 <p>

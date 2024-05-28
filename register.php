@@ -2,70 +2,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>註冊員工資料</title>
-<style>
-    body {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      font-family: Arial, sans-serif;
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>註冊員工資料</title>
+  <link rel="stylesheet" type="text/css" href="./CSS/registerStyle.css">
+
+  <script>
+    function showError(message) {
+      alert(message);
     }
-
-    .container {
-      width: 50%;
-      margin-top:auto;
-      text-align: center;
-      padding: 30px;
-      background-color: #f4f4f4;
-      border-radius: 10px;
-      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    
-
-    .container p {
-    margin-bottom: 10px;
-		text-align: left; 
-    }
-
-    select, input[type="text"], input[type="date"] {
-      width: 100%;
-      padding: 10px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      box-sizing: border-box; 
-    }
-
-    input[type="radio"] {
-      margin-right: 10px;
-    }
-
-    input[type="submit"], input[type="reset"] {
-      padding: 10px 20px;
-      font-size: 16px;
-      border: none;
-      background-color: #007bff;
-      color: #fff;
-      cursor: pointer;
-      border-radius: 5px;
-    }
-
-    input[type="submit"]:hover, input[type="reset"]:hover {
-      background-color: #0056b3;
-    }
-</style>
-
-<script>
-  function showError(message) {
-    alert(message);
-  }
-</script>
-
+  </script>
 </head>
-
 
 <body>
 
