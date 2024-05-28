@@ -32,8 +32,6 @@ else{
             exit();
         } 
     }
-
-
     
 
     if($Gender == 'Male'){
