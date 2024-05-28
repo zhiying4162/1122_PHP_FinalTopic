@@ -3,66 +3,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>員工打卡</title>
-<style>
-	body {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
+<link rel="stylesheet" type="text/css" href="./CSS/loginStyle.css">
 
-    .container {
-        width: 50%;
-        text-align: center;
-        padding: 30px;
-        background-color: #f4f4f4;
-        border-radius: 10px;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .container h1 {
-		text-align: center;
-    }
-
-    input[type="submit"], input[type="reset"] {
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        background-color: #007bff;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-
-    input[type="submit"]:hover, input[type="reset"]:hover {
-        background-color: #0056b3;
-    }
-	
-	input[type="button"], input[type="button"] {
-        padding: 10px 20px;
-        font-size: 16px;
-        border: none;
-        background-color: #007bff;
-        color: #fff;
-        cursor: pointer;
-        border-radius: 5px;
-    }
-
-    input[type="button"]:hover, input[type="button"]:hover {
-        background-color: #0056b3;
-    }
-	
-	#hidden-content {
-        display: none;
-    }
-	
-	#hidden-content p {
-		margin-bottom: 10px;
-		text-align: left;
-	}
-</style>
 	
 <script>
 	function leaveContent() {

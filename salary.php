@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>員工薪資計算</title>
-	<link rel="stylesheet" type="text/css" href="./CSS/salaryStyle.css">
+	<link rel="stylesheet" type="text/css" href="./CSS/loginStyle.css">
 
 	<script>
 		function showContent() {
@@ -50,7 +50,7 @@
         "option2" => "6月"
         ];
 		
-		require_once 'DB_conn.php';  
+		/*require_once 'DB_conn.php';  
 		$sql = "select BankCode from bank";
 		$result = mysqli_query($link,$sql);
 
@@ -65,7 +65,7 @@
 		   $EID[] = $row["ID"];
 		}
 		
-		mysqli_close($link);
+		mysqli_close($link);*/
     ?>
 	
   <h1>員工薪資計算</h1>    
