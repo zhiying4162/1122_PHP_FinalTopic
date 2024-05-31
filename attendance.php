@@ -3,7 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>出缺勤查詢</title>
-<link rel="stylesheet" type="text/css" href="./CSS/loginStyle.css">
 </head>
 
 <body>

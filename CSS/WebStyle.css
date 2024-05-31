@@ -1,0 +1,87 @@
+/*loginStyle.css*/
+body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      width: 50%;
+      text-align: center;
+      padding: 30px;
+      background-color: #f4f4f4;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container h1 {
+      text-align: center;
+    }
+
+    .container p {
+      margin-bottom: 10px;
+      text-align: left;
+    }
+
+    select,input[type="text"],input[type="date"],input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      box-sizing: border-box;
+    }
+
+    input[type="radio"] {
+      margin-right: 10px;
+    }
+
+    input[type="submit"], input[type="reset"] {
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 5px;
+  }
+
+  input[type="submit"]:hover, input[type="reset"]:hover {
+      background-color: #0056b3;
+  }
+
+  input[type="button"], input[type="button"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+
+    input[type="button"]:hover, input[type="button"]:hover {
+        background-color: #0056b3;
+    }
+
+    #hidden-content {
+          display: none;
+      }
+
+    #hidden-content p {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    

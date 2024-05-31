@@ -3,8 +3,6 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>員工打卡</title>
-<link rel="stylesheet" type="text/css" href="./CSS/loginStyle.css">
-
 	
 <script>
 	function leaveContent() {
