@@ -19,7 +19,7 @@
         <label for="password">密&emsp;&emsp;碼：</label>
         <div class="password-container">
           <input name="password" type="password" id="password" size="20" maxlength="14" />
-          <img src="PICS/eye-closed.png" id="togglePassword" class="toggle-password" alt="Show Password" />
+          <img src="PICS/close-eye.png" id="togglePassword" class="toggle-password" alt="Show Password" />
         </div>
       </p>
       <input type="submit" name="button" id="button" value="送出" />
@@ -37,10 +37,10 @@
         password.setAttribute('type', type);
 
         if (type === 'text') {
-          togglePassword.src = 'PICS/eye-closed.png';
+          togglePassword.src = 'PICS/cartoon-eyes.png';
           togglePassword.alt = 'Hide Password';
         } else {
-          togglePassword.src = 'PICS/eye-open.png';
+          togglePassword.src = 'PICS/close-eye.png';
           togglePassword.alt = 'Show Password';
         }
 
