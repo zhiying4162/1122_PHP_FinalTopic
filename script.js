@@ -69,3 +69,22 @@ function sendRequest(action) {
         })
         .catch(error => console.error('Error:', error));
 }
+document.addEventListener("DOMContentLoaded", function () {
+    var togglePassword = document.getElementById("togglePassword");
+    var password = document.getElementById("password");
+
+    togglePassword.addEventListener("click", function (e) {
+        var type = password.getAttribute('type') == 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+
+        if (type === 'text') {
+            togglePassword.src = 'pics/cartoon-eyes.png';
+            togglePassword.alt = 'Show Password';
+        } else {
+            togglePassword.src = 'pics/close-eye.png';
+            togglePassword.alt = 'Hide Password';
+        }
+
+    });
+});
+

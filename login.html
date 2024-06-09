@@ -4,7 +4,7 @@
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/loginStyle.css">
   <title>登入頁面</title>
 
 </head>
@@ -19,11 +19,18 @@
       </p>
       <p>
         <label for="password">密&emsp;&emsp;碼：</label>
-        <input name="password" type="password" id="password" size="20" maxlength="14" />
+      <div class="password-container">
+        <input name="password" type="password" id="password" size="20" maxlength="14" oninput="ShowPassword()" />
+        <img src="pics/close-eye.png" id="togglePassword" class="toggle-password" alt="Show Password" />
+      </div>
       </p>
       <input type="submit" name="button" id="button" value="送出" />
-      <input Type="reset" name="button" id="button" value="重設" />
+      <input type="reset" name="button" id="button" value="重設" />
     </form>
+  </div>
+
+  <script src="script.js"></script>
+
 </body>
 
 </html>

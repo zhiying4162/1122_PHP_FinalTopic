@@ -22,7 +22,7 @@ function handleButtonClick($action) {
     else{
         $OffWorkTime = $currentTime;
         $sql = "UPDATE attendance SET GWork='$OffWorkTime' WHERE TDate='$Date'";
-        $result_insert = mysqli_query($link,$sql);
+        $result = mysqli_query($link,$sql);
         if($result){
             return "下班打卡成功\n時間為：$currentTime";
         }else{
