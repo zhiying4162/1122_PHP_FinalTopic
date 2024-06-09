@@ -2,25 +2,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <title>註冊員工資料</title>
-  <link rel="stylesheet" type="text/css" href="./CSS/registerStyle.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" type="text/css" href="css/registerStyle.css">
+<title>註冊員工資料</title>
 
-  <script>
-    function showError(message) {
-      alert(message);
-    }
-  </script>
 </head>
 
 <body>
-
-<?php
-if (isset($_GET['error'])) {
-    $error_message = htmlspecialchars($_GET['error']);
-    echo "<script type='text/javascript'>showError('$error_message');</script>";
-}
-?>
 
 <div class="container">
 
@@ -108,8 +97,8 @@ if (isset($_GET['error'])) {
 		<input name="LeaveDate" type="date" value="" />
   </p>
   <p>
-  <input type="submit" name="button" id="button" value="送出" />
-  <input type="reset" name="button" id="button" value="重設" />
+  <input type="submit" name="button" id="button_r" value="送出" />
+  <input type="reset" name="button" id="button_r" value="重設" />
   
   </p>
 </form>

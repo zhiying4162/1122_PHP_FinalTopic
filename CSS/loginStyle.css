@@ -44,7 +44,10 @@ body {
   text-align: left;
 }
 
-select,input[type="text"],input[type="date"],input[type="password"] {
+select,
+input[type="text"],
+input[type="date"],
+input[type="password"] {
   width: 100%;
   padding: 10px;
   font-size: 16px;
@@ -57,7 +60,8 @@ input[type="radio"] {
   margin-right: 10px;
 }
 
-input[type="submit"], input[type="reset"] {
+input[type="submit"],
+input[type="reset"] {
   padding: 10px 20px;
   font-size: 16px;
   border: none;
@@ -67,6 +71,7 @@ input[type="submit"], input[type="reset"] {
   border-radius: 5px;
 }
 
-input[type="submit"]:hover, input[type="reset"]:hover {
+input[type="submit"]:hover,
+input[type="reset"]:hover {
   background-color: #0056b3;
 }

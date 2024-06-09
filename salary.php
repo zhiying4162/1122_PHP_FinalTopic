@@ -2,43 +2,11 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>員工薪資計算</title>
-	<link rel="stylesheet" type="text/css" href="./CSS/WebStyle.css">
 
-	<script>
-		function showContent() {
-			var expandContent = document.getElementById("hidden-content");
-			var monthSelect = document.getElementById("Month");
-			var selectedMonth = monthSelect.options[monthSelect.selectedIndex].text;
-			var monthText = document.getElementById("month-text");
-			var back = document.getElementById("back");
-			
-			/*var employeeSelect = document.getElementById("ID");
-			var selectedEmployee = employeeSelect.options[employeeSelect.selectedIndex].text;
-			var employeeText = document.getElementById("employee-text");*/
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/style.css">
+<title>員工薪資計算</title>
 
-			if (expandContent.style.display === "none") {
-				expandContent.style.display = "block";
-				back.style.display = "none";
-				/*employeeText.innerText = selectedEmployee;*/
-				monthText.innerText = selectedMonth;
-			} else {
-				expandContent.style.display = "none";
-				back.style.display = "inline";
-			}
-		}
-
-		function EmployeeSalary(){
-			var BasicWage = parseFloat(document.getElementById("HWage").value) || 0;
-			var WorkDays = parseFloat(document.getElementById("WorkDay").value) || 0;
-			var OverHours = parseFloat(document.getElementById("OHours").value) || 0;
-			var OverPay = parseFloat(document.getElementById("OPay").value) || 0;
-
-			var totalSalary = (BasicWage * WorkDays * 8) + (OverHours * OverPay);
-			document.getElementById("Money").value = totalSalary;
-		}
-	</script>
 </head>
 
 <body>
@@ -118,5 +86,6 @@
 		   <input type="button" onclick="history.go(-1)" value="回到選單頁" />
     </div>
 </form>
+<script src="script.js"></script>
 </body>
 </html>

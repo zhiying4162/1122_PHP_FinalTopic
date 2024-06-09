@@ -2,33 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/style.css">
 <title>員工薪資查詢</title>
-<link rel="stylesheet" type="text/css" href="./CSS/WebStyle.css">
-
-
-<script>
-	function showContent() {
-		var expandContent = document.getElementById("hidden-content");
-		var monthSelect = document.getElementById("Month");
-		var selectedMonth = monthSelect.options[monthSelect.selectedIndex].text;
-		var monthText = document.getElementById("month-text");
-        var back = document.getElementById("back");
-		
-		/*var employeeSelect = document.getElementById("ID");
-		var selectedEmployee = employeeSelect.options[employeeSelect.selectedIndex].text;
-		var employeeText = document.getElementById("employee-text");*/
-
-		if (expandContent.style.display === "none") {
-			expandContent.style.display = "block";
-            back.style.display = "none";
-			/*employeeText.innerText = selectedEmployee;*/
-			monthText.innerText = selectedMonth;
-		} else {
-			expandContent.style.display = "none";
-            back.style.display = "inline";
-		}
-	}
-</script>
 </head>
 
 <body>
@@ -76,7 +51,7 @@
   <input type="button" name="open" id="open" value="展開" onclick="showContent()" />
   <input type="button" onclick="history.go(-1)" name ='back' id ='back' value="回到選單頁" />
     <div id="hidden-content">
-        <h2><span id='ID'></span>2024年 <span id="month-text"></span> 的薪資計算 </h2>
+        <h2><span id='ID'></span>2024年 <span id="month-text"></span> 的薪資 </h2>
 		 <p>
 			<label for="HWage">基本時薪：</label>
 			<output name="HWage" type="HWage" id="HWage" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
@@ -101,5 +76,6 @@
 		   <input type="button" onclick="history.go(-1)" value="回到選單頁" />
     </div>
 </form>
+<script src="script.js"></script>
 </body>
 </html>

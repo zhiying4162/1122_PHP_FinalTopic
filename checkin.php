@@ -2,24 +2,15 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/style.css">
+
 <title>員工打卡</title>
-	
-<script>
-	function leaveContent() {
-		var expandContent = document.getElementById("hidden-content");
-		
-		if (expandContent.style.display === "none") {
-			expandContent.style.display = "block";
-		} else {
-			expandContent.style.display = "none";
-		}
-	}
-</script>
+
 </head>
 
 <body>
 <div class="container">
-<form id="form1" name="form1" method="post" action="">
+<form id="form1" name="form1" method="post" action="checkin_insert.php" onsubmit="return handleSubmit(event)">
 	<?php
 	
 		$options = [
@@ -40,8 +31,8 @@
 	?>
 
   <h1>打卡</h1>
-  <input type="submit" name="button" id="button" value="上&emsp;班" />
-  <input Type="reset" name="button" id="button" value="下&emsp;班" />
+  <button type="submit" name="action" value="work" id="work">上&emsp;班</button>
+  <button type="submit" name="action" value="offwork" id="offwork" disabled>下&emsp;班</button>
   <p>
   <input type="button" name="leave" id="leave" value="請假" onclick="leaveContent()" />
     <div id="hidden-content">
@@ -65,12 +56,13 @@
 			<input name="finishtime" type="date" value="<?php echo date('Y-m-d'); ?>" required="required" />
 		</p>
 		<p>
-			<textarea name="mytext" rows="6" cols="40" required="required">請假原因</textarea>
+			<textarea name="mytext" rows="6" cols="40" placeholder="請假原因"></textarea>
 		</p>
 		<p>
 		   <input type="button" value="送出" />
     </div>
   <input type="button" onclick="history.go(-1)" value="回到選單頁" />
 </form>
+<script src="script.js"></script>
 </body>
 </html>

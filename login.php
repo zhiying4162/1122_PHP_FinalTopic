@@ -5,6 +5,8 @@
     $id = $_POST['id'];
     $password = $_POST['password'];
 
+    $_SESSION['id'] = $id;
+
     $sql = "select CName , JobTitle from employee WHERE ID = '$id' AND Password = '$password'";
     $result = mysqli_query($link,$sql);
 
@@ -27,7 +29,7 @@
         } else {
             // 帳號和密碼不匹配，拒絕進入
             echo "帳號或密碼錯誤，請重新輸入。";
-            header("Location: login.html");
+            echo "<a href='login.html'>回到登入畫面";
         }
     }
     mysqli_close($link);

@@ -1,10 +1,11 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/loginStyle.css">
   <title>登入頁面</title>
-  <link rel="stylesheet" type="text/css" href="./CSS/LoginStyle.css">
 </head>
 
 <body>
@@ -17,36 +18,20 @@
       </p>
       <p>
         <label for="password">密&emsp;&emsp;碼：</label>
-        <div class="password-container">
-          <input name="password" type="password" id="password" size="20" maxlength="14" />
-          <img src="PICS/close-eye.png" id="togglePassword" class="toggle-password" alt="Show Password" />
-        </div>
+      <div class="password-container">
+        <input name="password" type="password" id="password" size="20" maxlength="14" oninput="ShowPassword()" />
+        <img src="pics/close-eye.png" id="togglePassword" class="toggle-password" alt="Show Password" />
+      </div>
       </p>
       <input type="submit" name="button" id="button" value="送出" />
       <input type="reset" name="button" id="button" value="重設" />
     </form>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function() {
-      var togglePassword = document.getElementById("togglePassword");
-      var password = document.getElementById("password");
 
-      togglePassword.addEventListener("click", function(e) {
-        var type = password.getAttribute('type') == 'password' ? 'text' : 'password';
-        password.setAttribute('type', type);
+  <script src="script.js"></script>
 
-        if (type === 'text') {
-          togglePassword.src = 'PICS/cartoon-eyes.png';
-          togglePassword.alt = 'Hide Password';
-        } else {
-          togglePassword.src = 'PICS/close-eye.png';
-          togglePassword.alt = 'Show Password';
-        }
-
-      });
-    });
-  </script>
+  >>>>>>> Ying
 </body>
 
 </html>
