@@ -9,11 +9,11 @@
 
 <body>
 <div class="container">
-<form id="form1" name="form1" method="post" action="">
+<form id="form1" name="form1" method="post" action="salarycheck_select.php">
     <?php
         $options = [
-        "option1" => "5月",
-        "option2" => "6月"
+        "5" => "5月",
+        "6" => "6月"
         ];
 		
 		require_once 'DB_conn.php';  #待修改連接
@@ -24,6 +24,8 @@
 		while($row = mysqli_fetch_assoc($result)){
 		   $BCode[] = $row["BankCode"];
 		}
+
+		$sql_sal = 
 		
 		mysqli_close($link);
     ?>
@@ -47,29 +49,29 @@
             ?>
         </select>
   </p>
-  <input type="button" name="open" id="open" value="展開" onclick="showContent()" />
+  <input type="submit" name="SInquire" id="SInquire" value="查詢"/>
   <input type="button" onclick="history.go(-1)" name ='back' id ='back' value="回到選單頁" />
     <div id="hidden-content">
         <h2><span id='ID'></span>2024年 <span id="month-text"></span> 的薪資 </h2>
 		 <p>
 			<label for="HWage">基本時薪：</label>
-			<output name="HWage" type="text" id="HWage" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<output name="HWage" type="text" id="HWage" size="20" maxlength="14" required="required">
 		 </p>
 		 <p>
 			<label for="WorkDay">上班天數：</label>
-			<output name="WorkDay" type="text" id="WorkDay" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<output name="WorkDay" type="text" id="WorkDay" size="20" maxlength="14" required="required">
 		 </p>
 		 <p>
 			<label for="OHours">加班時數：</label>
-			<output name="OHours" type="text" id="OHours" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<output name="OHours" type="text" id="OHours" size="20" maxlength="14" required="required">
 		 </p>
 		 <p>
 			<label for="OPay">加班費：</label>
-			<output name="OPay" type="text" id="OPay" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<output name="OPay" type="text" id="OPay" size="20" maxlength="14" required="required">
 		 </p>
 		 <p>
 			<label for="Money">實拿金額：</label>
-			<output name="Money" type="Money" id="Money" />
+			<output name="Money" type="Money" id="Money" >
 		 </p>
 		 <p>
 		   <input type="button" onclick="history.go(-1)" value="回到選單頁" />

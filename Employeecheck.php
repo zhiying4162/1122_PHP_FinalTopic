@@ -35,10 +35,15 @@
 			header("Location:EmployeeInformation.php");
 			exit();
 		}
+		elseif(isset($_POST['Leave'])){
+			header("Location:Leave.php");
+			exit();
+		}
 	}
 	?>
 
   <p><input type="submit" name="checkin" id="checkin" value="打&emsp;&emsp;卡" /></p>
+  <p><input type="submit" name="Leave" id="Leave" value="請&emsp;&emsp;假" /></p>
   <p><input type="submit" name="salarycheck" id="salarycheck" value="薪資查詢" /></p>
   <p><input type="submit" name="Employee" id="Employee" value="修改基本資料" /></p>
   <p><input type="submit" name="Signout" id="Signout" value="登出" /></p>

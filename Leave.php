@@ -10,21 +10,16 @@
 
 <body>
 <div class="container">
-<form id="form1" name="form1" method="post" action="checkin_insert.php" onsubmit="return handleSubmit(event)">
+<form id="form1" name="form1" method="post" action="Leave_insert.php">
 	<?php
 	
-		$options = [
-        "option1" => "事假",
-        "option2" => "病假"
+	$options = [
+        "Personal" => "事假",
+        "sick" => "病假"
 		];
 	?>
 
   <h1>請假</h1>
-
-  <p>
-  <input type="button" name="leave" id="leave" value="請假" onclick="leaveContent()" />
-    <div id="hidden-content">
-        <h2>請假</h2>
 		 <p>
 			<label for="leaveList">假別：</label>
 			<select name="leaveList" id="leaveList" required="required">
@@ -48,8 +43,8 @@
 		</p>
 		<p>
 		   <input type="submit" value="送出" />
-    </div>
-  <input type="button" onclick="history.go(-1)" value="回到選單頁" />
+		   <p></p>
+		   <input type="button" onclick="history.go(-1)" value="回到選單頁" />
 </form>
 <script src="script.js"></script>
 </body>

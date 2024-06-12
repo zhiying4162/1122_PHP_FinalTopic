@@ -29,16 +29,41 @@ function showContent() {
         back.style.display = "inline";
     }
 }
+function showContentSalary() {
+    var expandContent = document.getElementById("hidden-content");
+    var monthSelect = document.getElementById("Month");
+    var selectedMonth = monthSelect.options[monthSelect.selectedIndex].text;
+    var monthText = document.getElementById("month-text");
+    var back = document.getElementById("back");
+    var empId = document.getElementById("ID").value;
 
-function EmployeeSalary() {
-    var BasicWage = parseFloat(document.getElementById("HWage").value) || 0;
-    var WorkDays = parseFloat(document.getElementById("WorkDay").value) || 0;
-    var OverHours = parseFloat(document.getElementById("OHours").value) || 0;
-    var OverPay = parseFloat(document.getElementById("OPay").value) || 0;
+    if (expandContent.style.display === "none") {
+        expandContent.style.display = "block";
+        back.style.display = "none";
+        monthText.innerText = selectedMonth;
+        document.getElementById("emp-id").innerText = empId;
 
-    var totalSalary = (BasicWage * WorkDays * 8) + (OverHours * OverPay);
-    document.getElementById("Money").value = totalSalary;
+        // Fetch workdays and set in WorkDay input
+        fetch(`get_workday.php?id=${empId}&month=${monthSelect.value}`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("WorkDay").value = data;
+            })
+            .catch(error => console.error('Error:', error));
+    } else {
+        expandContent.style.display = "none";
+        back.style.display = "inline";
+    }
 }
+// function EmployeeSalary() {
+//     var BasicWage = parseFloat(document.getElementById("HWage").value) || 0;
+//     var WorkDays = parseFloat(document.getElementById("WorkDay").value) || 0;
+//     var OverHours = parseFloat(document.getElementById("OHours").value) || 0;
+//     var OverPay = parseFloat(document.getElementById("OPay").value) || 0;
+
+//     var totalSalary = (BasicWage * WorkDays * 8) + (OverHours * OverPay);
+//     document.getElementById("Money").value = totalSalary;
+// }
 
 function handleSubmit(event) {
     event.preventDefault(); // 停止表单提交
