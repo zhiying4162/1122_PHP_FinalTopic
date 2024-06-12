@@ -45,7 +45,7 @@
 			<input name="finishtime" type="date" value="<?php echo date('Y-m-d'); ?>" required="required" />
 		</p>
 		<p>
-			<textarea name="mytext" rows="6" cols="40" required="required" placeholder="請假原因"></textarea>
+			<textarea name="mytext" rows="6" cols="40" required="required">請假原因</textarea>
 		</p>
 		<p>
 		   <input type="button" value="送出" />
