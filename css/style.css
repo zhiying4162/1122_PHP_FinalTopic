@@ -79,7 +79,8 @@ input[id="salarycheck"],
 input[id="register"],
 input[id="salary"],
 input[id="attendance"],
-input[id="Signout"] {
+input[id="Signout"],
+input[id="Employee"] {
     padding: 10px 20px;
     font-size: 16px;
     border: none;

@@ -69,7 +69,7 @@
     $result_insert = mysqli_query($link,$sql_insert);
 
     if($result_insert){
-        echo '<form action="register_insert.php">';
+        echo '<form method="post" action="register_insert.php">';
         echo "<h1>註冊成功</h1>";
         echo "<p>員工姓名：$CName</p>";
         echo "<p>員工編號：$ID</p>";

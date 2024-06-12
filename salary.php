@@ -12,11 +12,11 @@
 
 <body>
 <div class="container">
-<form id="form1" name="form1" method="post" action="">
+<form id="form1" name="form1" method="post" action="salary.php">
     <?php
         $options = [
-        "option1" => "5月",
-        "option2" => "6月"
+        "5" => "5月",
+        "6" => "6月"
         ];
 		
 		require_once 'DB_conn.php';  #待修改連接
@@ -33,6 +33,7 @@
 		while($row = mysqli_fetch_assoc($result_ID)){
 		   $EID[] = $row["ID"];
 		}
+				
 		
 		mysqli_close($link);
     ?>
@@ -65,19 +66,19 @@
         <h2><span id='ID'></span>2024年 <span id="month-text"></span> 的薪資計算</h2>
 		 <p>
 			<label for="HWage">基本薪資：</label>
-			<input name="HWage" type="HWage" id="HWage" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<input name="HWage" type="text" id="HWage" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
 		 </p>
 		 <p>
 			<label for="WorkDay">上班天數：</label>
-			<input name="WorkDay" type="WorkDay" id="WorkDay" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<input name="WorkDay" type="text" id="WorkDay" size="20" maxlength="14" required="required" disabled = "disabled" oninput="EmployeeSalary()" />
 		 </p>
 		 <p>
 			<label for="OHours">加班時數：</label>
-			<input name="OHours" type="OHours" id="OHours" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<input name="OHours" type="text" id="OHours" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
 		 </p>
 		 <p>
 			<label for="OPay">加班費：</label>
-			<input name="OPay" type="OPay" id="OPay" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<input name="OPay" type="text" id="OPay" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
 		 </p>
 		 <p>
 			<label for="Money">實拿金額：</label>

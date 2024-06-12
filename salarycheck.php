@@ -17,6 +17,7 @@
         ];
 		
 		require_once 'DB_conn.php';  #待修改連接
+
 		$sql = "select BankCode from bank";
 		$result = mysqli_query($link,$sql);
 
@@ -30,13 +31,10 @@
   <h1>員工薪資查詢</h1>    
    <p>  
 		<label for="ID">員工編號：</label> 
-		<select name="ID" id="ID" required="ID">
-			<?php
-			foreach($ID as $cid){
-				echo "<option value=$cid>$cid</option>";
-			}
-			?>
-		</select>
+		<input name="ID" type="text" id="ID" required="ID" disabled = "disabled" value="<?php session_start();
+    	$id = $_SESSION['id']; 
+		echo $id ?>"/>
+			
   </p>
   <p>年份：2024年</p>
   <p>
@@ -55,19 +53,19 @@
         <h2><span id='ID'></span>2024年 <span id="month-text"></span> 的薪資 </h2>
 		 <p>
 			<label for="HWage">基本時薪：</label>
-			<output name="HWage" type="HWage" id="HWage" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<output name="HWage" type="text" id="HWage" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
 		 </p>
 		 <p>
 			<label for="WorkDay">上班天數：</label>
-			<output name="WorkDay" type="WorkDay" id="WorkDay" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<output name="WorkDay" type="text" id="WorkDay" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
 		 </p>
 		 <p>
 			<label for="OHours">加班時數：</label>
-			<output name="OHours" type="OHours" id="OHours" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<output name="OHours" type="text" id="OHours" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
 		 </p>
 		 <p>
 			<label for="OPay">加班費：</label>
-			<output name="OPay" type="OPay" id="OPay" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
+			<output name="OPay" type="text" id="OPay" size="20" maxlength="14" required="required" oninput="EmployeeSalary()" />
 		 </p>
 		 <p>
 			<label for="Money">實拿金額：</label>

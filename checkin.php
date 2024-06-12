@@ -14,20 +14,9 @@
 	<?php
 	
 		$options = [
-        "option1" => "事假",
-        "option2" => "病假"
+        "Personal" => "事假",
+        "sick" => "病假"
 		];
-
-		require_once 'DB_conn.php';
-		$sql = "select BankCode from bank";
-		$result = mysqli_query($link,$sql);
-
-		while($row = mysqli_fetch_assoc($result)){
-		   $BCode[] = $row["BankCode"];
-		}
-		
-		mysqli_close($link);
-
 	?>
 
   <h1>打卡</h1>
@@ -56,7 +45,7 @@
 			<input name="finishtime" type="date" value="<?php echo date('Y-m-d'); ?>" required="required" />
 		</p>
 		<p>
-			<textarea name="mytext" rows="6" cols="40" required="required">請假原因</textarea>
+			<textarea name="mytext" rows="6" cols="40" required="required" placeholder="請假原因"></textarea>
 		</p>
 		<p>
 		   <input type="button" value="送出" />

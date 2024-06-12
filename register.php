@@ -15,11 +15,6 @@
 
 <form id="form1" name="form1" method="post" action="register_insert.php">
 	<?php
-		$options = [
-        "employee" => "員工",
-        "director" => "主管"
-		];
-
 		require_once 'DB_conn.php';
 		$sql = "select BankCode from bank";
 		$result = mysqli_query($link,$sql);

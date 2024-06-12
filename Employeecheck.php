@@ -31,12 +31,16 @@
 		} elseif (isset($_POST['Signout'])) {
 			header("Location: login.html");
 			exit();
-        }
+        } elseif(isset($_POST['Employee'])){
+			header("Location:EmployeeInformation.php");
+			exit();
+		}
 	}
 	?>
-	
+
   <p><input type="submit" name="checkin" id="checkin" value="打&emsp;&emsp;卡" /></p>
   <p><input type="submit" name="salarycheck" id="salarycheck" value="薪資查詢" /></p>
+  <p><input type="submit" name="Employee" id="Employee" value="修改基本資料" /></p>
   <p><input type="submit" name="Signout" id="Signout" value="登出" /></p>
   
 </form>
