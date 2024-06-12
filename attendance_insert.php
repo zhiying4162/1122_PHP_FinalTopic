@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     echo '</table></br>';
     echo '<input type="submit" name="backI" id="backI" value="返回查詢畫面">';
-    echo '<input type="submit" name="backD" id="backD" value="返回查詢畫面">';
+    echo '<input type="submit" name="backD" id="backD" value="返回主畫面">';
     echo '</form>';
 
     $sql_insert = "INSERT INTO salary(ID,Month,WorkDay) VALUES ('$ID',$month,'$workDays')";

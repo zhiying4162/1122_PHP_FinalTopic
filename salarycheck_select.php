@@ -23,7 +23,7 @@
     }
     
     echo "<form id='form1' name='form1' method='post' action='salary_insert.php'>";
-    echo "<h2><span id='ID'></span>2024年 <span id='month-text'></span> 的薪資計算</h2>";
+    echo "<h2><span id='ID'></span>2024年 <span id='month-text'></span> 的薪資查詢</h2>";
     echo "<p>
 			<label for='HWage'>基本時薪：$HWage 元</label>
 			<output name='HWage' type='text' id='HWage' size='20' maxlength='14' required='required'>
